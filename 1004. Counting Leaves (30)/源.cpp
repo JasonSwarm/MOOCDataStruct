@@ -12,26 +12,7 @@ struct Node
 	int bro;
 	Node() { kid = Null; bro = Null; };
 };
-/*class Queue
-{
-private:
-	int* A;
-	int Size;
-public:
-	Queue(int MAXSize) { A = new int[MAXSize]; Size = 0; }
-	bool IsEmpty() { return Size == 0; }
-	void InQ(int x) { A[Size] = x; Size++; }
-	int OutQ() { int temp = A[Size]; Size--; return temp; }
-};
-*/
-/*
-void ShowTree(Node A[], int Size)
-{
-	for (int i = 1; i <= Size; i++)
-	{
-		cout <<i<<"µÄº¢×Ó"<< A[i].kid << "µÄÐÖµÜ"<<A[i].bro << endl;
-	}
-}*/
+
 int main()
 {
 	int N, M;
@@ -49,12 +30,10 @@ int main()
 			temp = A[temp].bro;
 		}
 	}
-//	ShowTree(A,N);//
-//	Queue q1(N), q2(N);
 	queue<int> q1;
 	vector<int> ans;
 	int Root = 1;
-//	q1.InQ(Root);
+
 	q1.push(Root);
 	q1.push(FLAG);
 	int Count = 0;
